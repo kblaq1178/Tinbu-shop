@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timbu Cloud Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Timbu Cloud Shop</h1>
+            <div class="cart-icon" id="cart-icon">
+                Cart(<span id="cart-count">0</span>) 🛒
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Flash sales on all Sofa Series</h2>
+            <p>Locate the ideal chair for your workstation: Comfortable, ergonomic, and optimized for your productivity</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="sofa.jpeg" alt="Sofa">
+        </div>
+    </section>
+
+    <section class="best-selling">
+        <h2>Best Selling Items</h2>
+        <div class="product-grid">
+            <div class="product" id="product-1">
+                <img src="black-chair.jpeg" alt="Black chair">
+                <p>Black chair</p>
+                <p>$650</p>
+                <button onclick="addToCart(1)">Add to Cart 🛒</button>
+            </div>
+            <div class="product" id="product-2">
+                <img src="white-chair.jpeg" alt="White chair">
+                <p>White chair</p>
+                <p>$650</p>
+                <button onclick="addToCart(2)">Add to Cart 🛒</button>
+            </div>
+            <div class="product" id="product-3">
+                <img src="brown-chair.jpeg" alt="Brown chair">
+                <p>Brown chair</p>
+                <p>$650</p>
+                <button onclick="addToCart(3)">Add to Cart 🛒</button>
+            </div>
+            <div class="product" id="product-4">
+                <img src="black-chair.jpeg" alt="Black chair">
+                <p>Black chair</p>
+                <p>$650</p>
+                <button onclick="addToCart(4)">Add to Cart 🛒</button>
+            </div>
+            <div class="product" id="product-5">
+                <img src="white-chair.jpeg" alt="White chair">
+                <p>White chair</p>
+                <p>$650</p>
+                <button onclick="addToCart(5)">Add to Cart 🛒</button>
+            </div>
+            <div class="product" id="product-6">
+                <img src="brown-chair.jpeg" alt="Brown chair">
+                <p>Brown chair</p>
+                <p>$650</p>
+                <button onclick="addToCart(6)">Add to Cart 🛒</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <h1>Timbu Cloud Shop</h1>
+            <P>Locate the ideal chair for your workstation: Comfortable, <br>
+                 ergonomic, and optimized for your productivity</P>
+            <p>&copy; 2024 Copyright All Rights Reserved</p>
+
+            <br>
+            <br>
+            <br>
+        </div>
+       
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Cart</h2>
+            <div id="cart-items"></div>
+            <p>Subtotal: $<span id="subtotal">0</span></p>
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+
+
+
+
+            <button id="checkout">Checkout</button>
+            <button id="back-to-home">Back to home</button>
+
+
+
+    <!-- Payment Gateway -->
+    <div id="payment-modal" class="payment-modal">
+        <div class="payment-modal-content">
+            <span class="close" onclick="closePayment()">&times;</span>
+            
+            <form id="payment-form">
+                <div class="ll">
+                    <h2>Payment Details</h2>
+                <label for="email">Email Address</label> <br> <br>
+                <input type="email" id="email" required class="i1"> <br> <br>
+
+                <div class="payment-method"> 
+                    <label>Select Payment Method</label> <br> <br>
+                    <div>
+                        <input type="radio" id="credit-card" name="payment-method" value="Credit/Debit Card" checked>
+                        <label for="credit-card">Credit/Debit Card</label> 
+                    </div> <br><br>
+                    <div>
+                        <input type="radio" id="virtual-account" name="payment-method" value="Virtual account">
+                        <label for="virtual-account">Virtual account</label>
+                    </div>
+                </div> <br> <br>
+
+                <div class="card-details">
+                    <label for="card-number">Card Details</label> <br>
+                    <input type="text" id="card-number" required class="i2"> <br><br> <br>
+
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="text" id="expiry-date" placeholder="MM/YYYY" required class="i3">
+
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" required class="i3">
+                </div>
+            </form>
+                </div>
+                
+                <div class="total">
+                    <p>Sub Total: <span id="sub-total">$0</span></p>
+                    <p>Discount: <span id="discount">$0</span></p>
+                    <p>Total: <span id="total">$0</span></p>
+                </div>
+
+                <button type="submit" class="sub-btn">Make Payment</button>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
