@@ -123,6 +123,7 @@ button {
     padding: 20px;
     border: 1px solid #888;
     width: 90%;
+    max-width: 500px;
 }
 
 .close {
@@ -217,7 +218,7 @@ form {
 .sub-btn {
     border-radius: 0;
     justify-content: center;
-    width: 350pc;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -246,4 +247,41 @@ form {
         width: 50px;
         height: 50px;
     }
-}
+
+    .cart-modal-content, .payment-modal-content {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        margin: 0;
+        width: 100px;
+        height: auto;
+    }
+
+    .cart-item p {
+        margin: 5px 0;
+    }
+
+    .cart-item button {
+        width: 100%;
+    }
+
+    .payment-details form {
+        padding: 10px;
+    }
+
+    .payment-details .total {
+        text-align: center;
+    }
+
+    .i3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    }
